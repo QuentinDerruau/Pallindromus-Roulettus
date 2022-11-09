@@ -1,0 +1,57 @@
+.buttonplay {
+	padding: 15px;
+	cursor: pointer;
+}
+.mainbutton{
+	background: #FF0099;
+	padding: 15px;
+	margin-top:150px;
+	border: 0;
+	color:white;
+	cursor: pointer;
+	width: 150px;
+}
+
+.mainbutton2{
+	background: #FF0099;
+	padding: 15px;
+	margin-top:40px;
+	border: 0;
+	color:white;
+	cursor: pointer;
+	width: 150px;
+}
+
+.top{
+	margin-top:100px;
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+}
+
+.game {
+	display: flex;
+	justify-content: center;
+	width: 150px;
+}
+
+.end{
+	opacity: 0.3;
+	cursor : default; 
+	padding: 15px;
+}
+
+.center{
+	text-align:center;
+}
+.flexcolumn{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+app-twitter {
+	display : flex;
+	
+}

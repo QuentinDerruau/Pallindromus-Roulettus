@@ -1,0 +1,42 @@
+<div class="container">
+    <button class="mainbutton buttonplay" *ngIf="!started; else game" (click)="startgame();generation()">Start Game</button>
+    </div> 
+    <ng-template #game>
+    
+        <div *ngIf="!ended"  class="top">
+         <p class="center"> Temps Restant : {{ tempsRestant }} ms </p>
+          
+         <p class="center">{{ mot }}</p>
+            <div class="container"> 
+                <div class="game">
+                    <button class="buttonplay" (click)="resetOui();generation()">oui</button>
+                    <button class="buttonplay" (click)="resetNon();generation()">Non</button>
+                </div>
+            </div>
+            <p class="center">score : {{ score }}</p>   
+        </div> 
+    
+    
+       <div *ngIf="ended"  class="top">
+        <p class="center" *ngIf="answerfalse"> {{mauvaisereponse}}</p>
+        <p class="center" *ngIf="timesup"> {{temps}}</p>
+        <p class="center">{{ mot }}</p>
+        <div class="container">
+            <div class="game">
+                <button class="end">oui</button>
+                <button class="end">Non</button>
+            </div>
+        </div>
+        <p class="center">score : {{ score }}</p>
+        <div class="flexcolumn">
+            <app-twitter [result]="score"></app-twitter>
+        <button (click)="startgame();generation()" class="mainbutton2">Reset Game</button> 
+            </div>
+        </div>
+    
+        
+    </ng-template>
+    
+    
+    
+    
